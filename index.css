@@ -1,4 +1,4 @@
-body {
+ body {
     background-color: rgb(27, 27, 27);
 }
 
@@ -29,75 +29,15 @@ body {
     display: flex;
     flex-direction: column;
     background-color: orange;
- /*   width: 130px;
-    height: 130px;
-  */
-}
- /*
-
-@keyframes tr-1 {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    33.3% {
-    
-     transform: rotate(180deg)  translateX(65px) translateY(32.5px) ;
-    }
-    66.6% {
-        
-        transform: rotate(180deg)   translateX(65px) translateY(65px)   ;
-    }
-
-
-    100% {
-        transform: rotate(360deg);
-    }
+ 
 } 
-
-
-@keyframes tr-2 {
-    0% {
-        transform: rotate(90deg);
-    }
-
-    33.3% {
-        transform: rotate(270deg)  ;
-    }
-    66.6% {
-        transform: rotate(270deg)  ;
-    }
-
-
-    100% {
-        transform: rotate(450deg) ;
-    }
-} 
-
-
-.triangle-1 {
-    transform: rotate(180deg);
-  background-color: red;
-  animation: 4s tr-1 ease-in-out  infinite;
-   
-    
-}
-
-.triangle-2 {
-  
-   animation: 4s tr-2 ease-in-out infinite;
-    
-}
-
-*/
-
 
 @keyframes rotate {
     100% {-webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
       transform: rotate(360deg);}
   }
-
+/*
 .triangle-1 {
     -webkit-animation: rotate 6s linear;
  
@@ -107,6 +47,23 @@ body {
    
     
 }
+*/
+
+/*
+.triangle-1 {
+    -webkit-animation: rotate 6s linear infinite;
+    -webkit-transform-origin: 33% 0;  
+    -ms-transform-origin: 33% 0;
+    transform-origin: 33% 0;
+}
+*/
+.triangle-1 {
+    -webkit-animation: rotate 6s linear infinite; /* Добавил infinite, чтобы повторялось */
+    -webkit-transform-origin: 50% 0%; /* Вращение от верхнего левого угла */
+    -ms-transform-origin: 50% 0%;
+    transform-origin: 50% 0%; /* Вращение от верхнего угла */
+}
+
 
 .triangle-2 {
   display: none;
@@ -115,11 +72,7 @@ body {
 }
 .element-2 {
     background: #FF9900;
- /*   -webkit-transform-origin: top left;
-    -ms-transform-origin: top left;
-    transform-origin: top left;
-*/
-
+ 
 
 }
 [class*="__container"] {
@@ -128,3 +81,4 @@ body {
     padding: 0 40px;
 
 }
+   
