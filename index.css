@@ -30,55 +30,35 @@ body {
 }
 
 @keyframes rotate-anim {
-    0% {
-        transform: rotate(0deg)  ;
-    }
-    25% {
-        transform: rotate(0deg)   ;
-    }
-    50% {
-        transform: rotate(180deg)   ;
-    }
-    75% {
-        transform: rotate(180deg)    ;
-    }
-    100% {
-        transform: rotate(360deg)  ;
-    }
+ 
+    0% { transform: rotate(180deg); }
+    25% { transform: rotate(180deg); }
+    50% { transform: rotate(360deg); }
+    75% { transform: rotate(360deg); }
+    100% { transform: rotate(540deg); }
 }
 
 @keyframes rotate-anim-2 {
-    0% {
-        transform: rotate(90deg);
-    }
-    25% {
-   
-        transform: rotate(270deg);
-    }
-    50% {
-        transform: rotate(270deg);
-    }
-    75% {
-        transform: rotate(450deg);
-    }
-    100% {
-        transform: rotate(450deg);
-    }
-   
+    0% { transform: rotate(90deg); }
+    25% { transform: rotate(270deg); }
+    50% { transform: rotate(270deg); }
+    75% { transform: rotate(450deg); }
+    100% { transform: rotate(450deg); }
 }
 
 .triangle-1 {
     transform: rotate(0deg);
     animation: rotate-anim 5s linear infinite;
-    transform-origin: 50% 0%;  
+    transform-origin: 50% 0%;
     position: relative;
-    top: 65px
+    top: 65px;
 }
 
 .triangle-2 {
     transform: rotate(90deg);
     animation: rotate-anim-2 5s linear infinite;
-    transform-origin: 50% 0%; 
+    animation-delay: 2.5s; 
+    transform-origin: 50% 0%;
 }
 
 [class*="__container"] {
@@ -86,111 +66,4 @@ body {
     margin: 0 auto;
     padding: 0 40px;
 }
-
-/*body {
-    background-color: rgb(27, 27, 27);
-}
-
-.wrapper {
-    min-height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.content {
-    flex: 1 1 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.loader__triangle {
-    width: 0;
-    height: 0;
-    border-left: 65px solid transparent;
-    border-right: 65px solid transparent;
-    border-bottom: 65px solid rgb(214, 213, 213);
-
-}
-.loader {
-    display: flex;
-    flex-direction: column;
-    background-color: red;
-  
  
-} 
- 
-@keyframes rotate-anim {
-    0% {
-        transform: rotate(0deg)  translateY(100%);
-    }
-    25% {
-        transform: rotate(0deg)  translateY(100%);
-    }
-    50% {
-        transform: rotate(180deg)   translateY(100%);
-    }
-    75% {
-        transform: rotate(180deg)    translateY(100%)  ;
-    }
-    100% {
-        transform: rotate(360deg) translateY(100%) ;
-    }
-   
-}
-@keyframes rotate-anim-2 {
-    0% {
-        transform: rotate(90deg);
-    }
-    25% {
-   
-        transform: rotate(270deg);
-    }
-    50% {
-        transform: rotate(270deg);
-    }
-    75% {
-        transform: rotate(460deg);
-    }
-    100% {
-        transform: rotate(460deg);
-    }
-   
-}
-
-.triangle-1 {
-    transform: rotate(0deg) translateY(100%) ;
-
- 
--webkit-animation: rotate-anim 3s  linear infinite;
-    -webkit-transform-origin: 50% 50%; 
-    -ms-transform-origin: 50% 50%;
-    transform-origin: 50% 50%; 
-}
-
-
-.triangle-2 {
-  
-  transform: rotate(90deg);
-
-  
-  
-  
-  -webkit-animation: rotate-anim-2 3s  linear infinite;
- 
-     -webkit-transform-origin: 50% 0%; 
-     -ms-transform-origin: 50% 0%;
-     transform-origin: 50% 0%; 
-  
-    
-}
- 
-[class*="__container"] {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 40px;
-
-}
-   */
