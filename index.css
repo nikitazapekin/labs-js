@@ -1,0 +1,130 @@
+body {
+    background-color: rgb(27, 27, 27);
+}
+
+.wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.loader__triangle {
+    width: 0;
+    height: 0;
+    border-left: 65px solid transparent;
+    border-right: 65px solid transparent;
+    border-bottom: 65px solid rgb(214, 213, 213);
+
+}
+.loader {
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+ /*   width: 130px;
+    height: 130px;
+  */
+}
+ /*
+
+@keyframes tr-1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    33.3% {
+    
+     transform: rotate(180deg)  translateX(65px) translateY(32.5px) ;
+    }
+    66.6% {
+        
+        transform: rotate(180deg)   translateX(65px) translateY(65px)   ;
+    }
+
+
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+
+
+@keyframes tr-2 {
+    0% {
+        transform: rotate(90deg);
+    }
+
+    33.3% {
+        transform: rotate(270deg)  ;
+    }
+    66.6% {
+        transform: rotate(270deg)  ;
+    }
+
+
+    100% {
+        transform: rotate(450deg) ;
+    }
+} 
+
+
+.triangle-1 {
+    transform: rotate(180deg);
+  background-color: red;
+  animation: 4s tr-1 ease-in-out  infinite;
+   
+    
+}
+
+.triangle-2 {
+  
+   animation: 4s tr-2 ease-in-out infinite;
+    
+}
+
+*/
+
+
+@keyframes rotate {
+    100% {-webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+      transform: rotate(360deg);}
+  }
+
+.triangle-1 {
+    -webkit-animation: rotate 6s linear;
+ 
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+   
+    
+}
+
+.triangle-2 {
+  display: none;
+  
+    
+}
+.element-2 {
+    background: #FF9900;
+ /*   -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+*/
+
+
+}
+[class*="__container"] {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+}
