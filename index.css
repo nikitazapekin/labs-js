@@ -31,37 +31,50 @@
     background-color: orange;
  
 } 
-
-@keyframes rotate {
-    100% {-webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-      transform: rotate(360deg);}
-  }
 /*
-.triangle-1 {
-    -webkit-animation: rotate 6s linear;
- 
-    -webkit-transform-origin: top left;
-    -ms-transform-origin: top left;
-    transform-origin: top left;
+@keyframes rotate-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(180deg);
+    }
+    66% {
+        transform: rotate(180deg); 
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+*/
+@keyframes rotate-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
    
-    
 }
-*/
 
-/*
 .triangle-1 {
-    -webkit-animation: rotate 6s linear infinite;
-    -webkit-transform-origin: 33% 0;  
-    -ms-transform-origin: 33% 0;
-    transform-origin: 33% 0;
-}
-*/
-.triangle-1 {
-    -webkit-animation: rotate 6s linear infinite; /* Добавил infinite, чтобы повторялось */
-    -webkit-transform-origin: 50% 0%; /* Вращение от верхнего левого угла */
+    transform: rotate(0deg);
+
+
+
+ -webkit-animation: rotate-anim 3s  linear infinite;
+    -webkit-transform-origin: 50% 0%; 
     -ms-transform-origin: 50% 0%;
-    transform-origin: 50% 0%; /* Вращение от верхнего угла */
+    transform-origin: 50% 0%; 
 }
 
 
@@ -70,11 +83,7 @@
   
     
 }
-.element-2 {
-    background: #FF9900;
  
-
-}
 [class*="__container"] {
     max-width: 1280px;
     margin: 0 auto;
