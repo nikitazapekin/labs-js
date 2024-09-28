@@ -28,50 +28,55 @@
 .loader {
     display: flex;
     flex-direction: column;
-    background-color: orange;
+    background-color: red;
+  
  
 } 
-/*
+ 
 @keyframes rotate-anim {
     0% {
-        transform: rotate(0deg);
-    }
-    33% {
-        transform: rotate(180deg);
-    }
-    66% {
-        transform: rotate(180deg); 
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-*/
-@keyframes rotate-anim {
-    0% {
-        transform: rotate(0deg);
+        transform: rotate(0deg)    translateY(100%) ;
     }
     25% {
-        transform: rotate(0deg);
+        transform: rotate(0deg)    translateY(100%) ;
     }
     50% {
-        transform: rotate(180deg);
+        transform: rotate(180deg)   translateY(-100%)  ;
     }
     75% {
-        transform: rotate(180deg);
+        transform: rotate(180deg)      translateY(-100%)  ;
     }
     100% {
-        transform: rotate(360deg);
+        transform: rotate(360deg)    translateY(100%) ;
+    }
+   
+}
+@keyframes rotate-anim-2 {
+    0% {
+        transform: rotate(90deg);
+    }
+    25% {
+   
+        transform: rotate(270deg);
+    }
+    50% {
+        transform: rotate(270deg);
+    }
+    75% {
+        transform: rotate(460deg);
+    }
+    100% {
+        transform: rotate(460deg);
     }
    
 }
 
 .triangle-1 {
-    transform: rotate(0deg);
+    transform: rotate(0deg) translateY(100%);
 
 
-
- -webkit-animation: rotate-anim 3s  linear infinite;
+    -webkit-animation: rotate-anim 3s  linear infinite;
+  
     -webkit-transform-origin: 50% 0%; 
     -ms-transform-origin: 50% 0%;
     transform-origin: 50% 0%; 
@@ -79,7 +84,17 @@
 
 
 .triangle-2 {
-  display: none;
+  
+  transform: rotate(90deg);
+
+  
+  
+  /*
+  -webkit-animation: rotate-anim-2 3s  linear infinite;
+  */
+     -webkit-transform-origin: 50% 0%; 
+     -ms-transform-origin: 50% 0%;
+     transform-origin: 50% 0%; 
   
     
 }
