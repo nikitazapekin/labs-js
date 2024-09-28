@@ -15,13 +15,36 @@ body {
     align-items: center;
     justify-content: center;
 }
-
+/*
 .loader__triangle {
     width: 0;
     height: 0;
     border-left: 65px solid transparent;
     border-right: 65px solid transparent;
     border-bottom: 65px solid rgb(214, 213, 213);
+}
+*/
+.loader__triangle {
+    width: 0;
+    height: 0;
+    border-left: 65px solid transparent;
+    border-right: 65px solid transparent;
+    border-bottom: 65px solid rgb(214, 213, 213); 
+    position: relative; 
+}
+
+.loader__triangle::after {
+    content: '';
+    position: absolute;
+    top: -10px; 
+    left: -65px; 
+    width: 0;
+    height: 0;
+    border-left: 65px solid transparent;
+    border-right: 65px solid transparent;
+    border-bottom: 65px solid rgba(26, 189, 189, 0.8);  
+    filter: blur(10px); 
+    z-index: -1; 
 }
 
 .loader {
@@ -51,7 +74,8 @@ body {
     animation: rotate-anim 5s linear infinite;
     transform-origin: 50% 0%;
     position: relative;
-    top: 65px;
+  top: 65px; 
+ 
 }
 
 .triangle-2 {
