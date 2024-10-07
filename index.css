@@ -46,12 +46,12 @@
      width: 100%;
      height: 100%;
      object-fit: cover;
-    /*  position: relative;
-    */
+  
     position: absolute;
     left: 0;
     top: 0;
      z-index: -1;
+     transition: 1s;
  }
 
 
@@ -60,12 +60,7 @@
      height: 50%;
 position: relative;
      background-color: rgb(255, 255, 255, 1);
-   /*  position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%); 
-     display: flex;
-     justify-content: space-between; */
+ 
 
 
      mix-blend-mode: overlay;
@@ -79,7 +74,7 @@ position: relative;
     color: #fff;
     outline: none;
     font-size: 32px;
-    font-weight: bold;
+    font-weight: 900;
     position: relative;
     z-index: 1121;
     border: 3px solid orange;
@@ -105,74 +100,29 @@ position: relative;
     height: 100%;
     align-items: center;
 }
- /*
-.slider {
-    width: 100vw;
-    height: 100vh;
-}
-
-.slider__slide {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-   
-}
-
+  
  
-.slider__inner {
-    width: 100vw;
-    height: 100vh;
+
+
+.active {
+    animation: 1s brightness ease-in-out;
 }
-
-.slider__image {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+@keyframes brightness {
+    0% {
+        opacity: 1;
+    }
+    54% {
+        filter: none;
+    }    
+    58% {
+        opacity: 1;
+    }     
+    59.99999% {
+        filter: brightness(10);
+        z-index: 1;
+    }   
+    60% {
+        opacity: 0;
+        z-index: -1;
+    }   
 }
-*/
- /*
-.overlay {
-   position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-   
-    background: rgba(0, 0, 0, 0.6);  
-    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
-    border: 40px solid red;
-}
-
-.overlay::after {
-    position: absolute;
-    right: 0;
-    top:0;
-    content: "geee";
-
-}
-    */
-
-
-
- /*
-
-.slider__btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    border: 3px solid orange;
-    padding: 10px 20px;
-    background-color: rgba(255, 165, 0, 0.5);  
-    color: white;
-    font-size: 24px;
-}
-
-.slider-left {
-  right: 25%;  
-}
-
-.slider-right {
-    right: 15%; 
-}
-    */
