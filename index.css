@@ -1,67 +1,4 @@
-/*
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body {
-    background-color: rgb(27, 27, 27);
-}
-
-.wrapper {
-    min-height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.content {
-    flex: 1 1 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.slider {
-    width: 100vw;
-    height: 100vh;
-  
-
-}
-
-.slider__slide {
-    filter: brightness(0.4);
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-}
-.slider__slide::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 400px;
-    height: 300px;
-    background-color: white;
-    filter: brightness(1);
-}
-
-.slider__slide-normal {
-    width: 500px;
-    height: 400px;
-    filter: brightness(1);
-}
-.slider__inner {
-    width: 100vw;
-    height: 100vh;
-    
-}
-.slider__image {
-  
-    object-fit: cover;
-}
-
-*/
+ 
 * {
     box-sizing: border-box;
     margin: 0;
@@ -110,83 +47,96 @@ body {
     height: 100%;
 }
 
+/*
+.overlay {
+   position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
+    background: rgba(0, 0, 0, 0.6);  
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+    border: 40px solid red;
+}
+
+.overlay::after {
+    position: absolute;
+    right: 0;
+    top:0;
+    content: "geee";
+
+}
+    */
 
  
 
-
-
-
-
-
-
-
-
-
 /*
-        .image-container {
-            position: relative;
-            display: inline-block; 
-        }
-        
-        .background-image {
-            display: block;
-            width: 100%; 
-            height: auto; 
-        }
-        
 
+.slider__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border: 3px solid orange;
+    padding: 10px 20px;
+    background-color: rgba(255, 165, 0, 0.5);  
+    color: white;
+    font-size: 24px;
+}
 
-        
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.6);  
-            clip-path: polygon(
-                0 0, 
-                100% 0, 
-                100% 25px, 
-                calc(100% - 25px) 25px, 
-                calc(100% - 25px) calc(100% - 25px), 
-                25px calc(100% - 25px), 
-                25px 25px, 
-                100% 25px,  
-                100% 0, 
-                0 0
-            );
-        }
+.slider-left {
+  right: 25%;  
+}
 
-        */
+.slider-right {
+    right: 15%; 
+}
+    */
+ 
 
-
-
-        .image-container {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .background-image {
-            display: block;
-            width: 100%;
-            height: auto;
-        
-        }
-        
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.6);  
-            clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
-        }
-       
-
-        .slider__btn {
-            cursor: pointer;
-            border: 3px solid orange;
-
-        }
+      
+    .image-container {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .background-image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .overlay {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6); /* Затемнение */
+        overflow: hidden; /* Скрытие лишнего контента */
+    }
+    
+    .overlay::before {
+        content: '';
+        position: absolute;
+        top: 50%; /* Положение по вертикали */
+        left: 50%; /* Положение по горизонтали */
+        width: 60%; /* Ширина яркого прямоугольника */
+        height: 60%; /* Высота яркого прямоугольника */
+        background: rgba(255, 255, 255, 0); /* Прозрачный фон для центра */
+        transform: translate(-50%, -50%); /* Центрирование */
+        z-index: 1; /* Убедитесь, что прямоугольник сверху */
+    }
+    
+    .overlay::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6); /* Затемнение */
+        z-index: 0; /* Убедитесь, что затемнение под прямоугольником */
+        pointer-events: none; /* Позволяет взаимодействовать с изображением */
+    }
+    
+ 
