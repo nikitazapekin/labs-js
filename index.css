@@ -1,28 +1,111 @@
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     background-color: rgb(27, 27, 27);
+ }
+
+ .wrapper {
+     min-height: 100vh;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .content {
+     flex: 1 1 auto;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+
+ .slider {
+     width: 100vw;
+     height: 100vh;
+ }
+
+ .slider__slide {
+     position: relative;
+     width: 100vw;
+     height: 100vh;
+     background-color: rgba(2, 2, 2, 0.4);
  
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+ }
+
+
+ .slider__inner {
+     width: 100vw;
+     height: 100vh;
+ }
+
+ .slider__image {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+    /*  position: relative;
+    */
+    position: absolute;
+    left: 0;
+    top: 0;
+     z-index: -1;
+ }
+
+
+ .square {
+     width: 50%;
+     height: 50%;
+position: relative;
+     background-color: rgb(255, 255, 255, 1);
+   /*  position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%); 
+     display: flex;
+     justify-content: space-between; */
+
+
+     mix-blend-mode: overlay;
+ }
+
+
+ .slider__btn {
+    padding: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1121;
+    border: 3px solid orange;
+    border-radius: 4px;
+ }
+.btn-left, .btn-right  {
+    align-self: center;
+
 }
 
-body {
-    background-color: rgb(27, 27, 27);
+
+.btn-left {
+   border-right: none;
+ 
+}
+.btn-right {
+    border-left: none;
 }
 
-.wrapper {
-    min-height: 100vh;
-    overflow: hidden;
+.slider__preview {
     display: flex;
-    flex-direction: column;
-}
-
-.content {
-    flex: 1 1 auto;
-    display: flex;
-    align-items: center;
     justify-content: center;
+    height: 100%;
+    align-items: center;
 }
-
+ /*
 .slider {
     width: 100vw;
     height: 100vh;
@@ -46,8 +129,8 @@ body {
     width: 100%;
     height: 100%;
 }
-
-/*
+*/
+ /*
 .overlay {
    position: absolute;
     top: 0;
@@ -69,9 +152,9 @@ body {
 }
     */
 
- 
 
-/*
+
+ /*
 
 .slider__btn {
     position: absolute;
@@ -93,50 +176,3 @@ body {
     right: 15%; 
 }
     */
- 
-
-      
-    .image-container {
-        position: relative;
-        display: inline-block;
-    }
-    
-    .background-image {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-    
-    .overlay {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6); /* Затемнение */
-        overflow: hidden; /* Скрытие лишнего контента */
-    }
-    
-    .overlay::before {
-        content: '';
-        position: absolute;
-        top: 50%; /* Положение по вертикали */
-        left: 50%; /* Положение по горизонтали */
-        width: 60%; /* Ширина яркого прямоугольника */
-        height: 60%; /* Высота яркого прямоугольника */
-        background: rgba(255, 255, 255, 0); /* Прозрачный фон для центра */
-        transform: translate(-50%, -50%); /* Центрирование */
-        z-index: 1; /* Убедитесь, что прямоугольник сверху */
-    }
-    
-    .overlay::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6); /* Затемнение */
-        z-index: 0; /* Убедитесь, что затемнение под прямоугольником */
-        pointer-events: none; /* Позволяет взаимодействовать с изображением */
-    }
-    
- 
