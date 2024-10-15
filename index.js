@@ -9,7 +9,7 @@ let btns = document.querySelectorAll(".slider__btn");
 let currentIndex = 0;
 
 imageElement[0].src = images[currentIndex];
-
+/*
 const handleNext = () => {
     imageElement[0].classList.remove('active');  
     if (currentIndex < images.length - 1) {
@@ -35,6 +35,34 @@ const handlePrev = () => {
         imageElement[0].classList.add('active');  
  
 };
+*/
+
+const handleNext = () => {
+    imageElement[0].classList.remove('active');
+    setTimeout(() => {  // Небольшая задержка перед добавлением класса
+        if (currentIndex < images.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        imageElement[0].src = images[currentIndex];
+        imageElement[0].classList.add('active');
+    }, 150);  // задержка, чтобы анимация перезапустилась
+};
+
+const handlePrev = () => {
+    imageElement[0].classList.remove('active');
+    setTimeout(() => {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = images.length - 1;
+        }
+        imageElement[0].src = images[currentIndex];
+        imageElement[0].classList.add('active');
+    }, 150);
+};
+
 
 btns[0].addEventListener("click", handlePrev);
 btns[1].addEventListener("click", handleNext);
