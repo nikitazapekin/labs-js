@@ -54,7 +54,7 @@
      transition: 1s;
  }
 */
-
+/*
 .slider__image {
     width: 100%;
     height: 100%;
@@ -70,6 +70,27 @@
     transform: scale(1); 
 
 }
+    */
+
+    .slider__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Картинка всегда растягивается на контейнер */
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        transition: transform 0.6s ease-in-out, object-position 0.6s ease-in-out;
+        transform: scale(1); /* Начальное состояние: без увеличения */
+        object-position: center center; /* Центрируем изображение */
+    }
+    
+    .slider__image.active {
+        transform: scale(1.1); /* Увеличение содержимого до 110% */
+        object-position: center center; /* Сохраняем центр изображения */
+    }
+    
+
  .square {
      width: 50%;
      height: 50%;
