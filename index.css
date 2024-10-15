@@ -105,8 +105,9 @@ position: relative;
 
 
 .active {
-    animation: 1s brightness ease-in-out;
+    
 }
+/*   animation: 1s brightness ease-in-out; */
 @keyframes brightness {
     0% {
         opacity: 1;
